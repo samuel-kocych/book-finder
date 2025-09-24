@@ -40,13 +40,11 @@ It helps users search for books via the **Google Books API** and save favourites
 
 ```bash
 git clone https://github.com/samuel-kocych/book-finder.git
-cd book-finder
 ```
 
 2. Install frontend dependencies and start Angular:
 
 ```bash
-Copy code
 cd book-finder
 npm install
 ng serve
@@ -55,7 +53,6 @@ ng serve
 3. Install backend dependencies and start Express server:
 
 ```bash
-Copy code
 cd book-api-server
 npm install
 npm run dev
@@ -64,7 +61,6 @@ npm run dev
 4. Open the app in your browser: http://localhost:4200
 
 
-Notes
-Project was also hosted on AWS S3 and EC2 for demo purposes.
-
-User favourite books are stored in MongoDB via the Express server.
+## Notes
+- **Project was also hosted on AWS S3 and EC2 for demo purposes.
+- **User favourite books are stored in MongoDB via the Express server.

@@ -47,7 +47,7 @@ cd book-finder
 
 ```bash
 Copy code
-cd frontend
+cd book-finder
 npm install
 ng serve
 ```
@@ -56,7 +56,7 @@ ng serve
 
 ```bash
 Copy code
-cd backend
+cd book-api-server
 npm install
 npm run dev
 ```

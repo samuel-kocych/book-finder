@@ -3,7 +3,7 @@
 Book Finder is a web application built with **Angular**, **Node.js**, **Express**, **MongoDB**, and **Bootstrap**.  
 It helps users search for books via the **Google Books API** and save favourites to a MongoDB database.
 
-![Home Page](src/assets/screenshots/homepage.png)
+![Home Page](book-finder/src/screenshots/homepage.png)
 
 ---
 

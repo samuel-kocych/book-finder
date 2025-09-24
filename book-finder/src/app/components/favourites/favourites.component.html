@@ -1,0 +1,24 @@
+<div class="container mt-4">
+  <h2>My favourite books</h2>
+
+  <!-- show loading state -->
+  <div *ngIf="isLoading" class="text-center">
+    <p>Loading favourites...</p>
+  </div>
+
+  <!-- show cards when loaded -->
+  <div class="row" *ngIf="!isLoading && favouriteBooks.length > 0">
+    <div class="col-md-4 mb-3" *ngFor="let book of favouriteBooks">
+      <app-book-card
+        [book]="book"
+        mode="favorites"
+        (removedFromFavorites)="onRemovedFromFavorites($event)"
+      ></app-book-card>
+    </div>
+  </div>
+
+  <!-- show message if empty -->
+  <div *ngIf="!isLoading && favouriteBooks.length === 0" class="text-center">
+    <p>No favourites found</p>
+  </div>
+</div>

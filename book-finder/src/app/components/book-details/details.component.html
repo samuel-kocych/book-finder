@@ -1,0 +1,76 @@
+<div *ngIf="book" class="container my-5">
+  <!-- header -->
+  <div class="row mb-4 align-items-center">
+    <div class="col-md-4 text-center">
+      <img
+        [src]="
+          book.volumeInfo?.imageLinks?.thumbnail ||
+          'https://placehold.co/300x400?text=no+image'
+        "
+        [alt]="book.volumeInfo?.title || 'Book cover'"
+        class="img-fluid rounded shadow book-image"
+        style="max-height: 400px"
+      />
+    </div>
+    <div class="col-md-8">
+      <h1 class="display-5 fw-bold">
+        {{ book.volumeInfo?.title || "Untitled book" }}
+      </h1>
+      <p class="text-muted fs-5">
+        <i class="bi bi-person-fill me-1"></i>
+        {{ book.volumeInfo?.authors?.join(", ") || "Unknown author" }}
+      </p>
+      <p class="text-muted">
+        <i class="bi bi-calendar-event-fill me-1"></i>
+        {{ book.volumeInfo?.publishedDate || "Unknown date" }}
+      </p>
+      <p class="text-muted">
+        <i class="bi bi-tag-fill me-1"></i>
+        {{ book.volumeInfo?.categories?.join(", ") || "Uncategorized" }}
+      </p>
+    </div>
+  </div>
+
+  <!-- description -->
+  <div class="mb-4">
+    <h5><i class="bi bi-info-circle-fill me-2"></i>Description</h5>
+    <p
+      [class.clamp]="!showFullDescription"
+      class="lead description-text"
+      [innerHTML]="book.volumeInfo?.description || 'No description available'"
+    ></p>
+    <div class="text-end">
+      <button
+        *ngIf="book.volumeInfo?.description?.length > 600"
+        class="btn btn-sm btn-outline-primary mt-2"
+        (click)="toggleDescription()"
+      >
+        {{ showFullDescription ? "Show less" : "Show more" }}
+      </button>
+    </div>
+  </div>
+
+  <!-- extra info -->
+  <div class="row mb-4">
+    <div class="col-md-4">
+      <h6><i class="bi bi-upc-scan me-2"></i>ISBN</h6>
+      <p>
+        {{ book.volumeInfo?.industryIdentifiers?.[0]?.identifier || 'Unknown' }}
+      </p>
+    </div>
+    <div class="col-md-4">
+      <h6><i class="bi bi-cart-check-fill me-2"></i>Availability</h6>
+      <p>{{ book.saleInfo?.saleability || "Unknown" }}</p>
+    </div>
+    <div class="col-md-4">
+      <h6><i class="bi bi-star-fill me-2 text-warning"></i>Rating</h6>
+      <p>
+        {{
+          book.volumeInfo?.averageRating
+            ? book.volumeInfo.averageRating + " / 5"
+            : "No ratings yet"
+        }}
+      </p>
+    </div>
+  </div>
+</div>

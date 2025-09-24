@@ -1,0 +1,23 @@
+.about-img {
+  width: 100%;
+  max-width: 600px;
+  height: 400px;
+  object-fit: cover;
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+  font-size: 1.05rem;
+}
+
+.features-list li {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .about-img {
+    max-width: 100%;
+    height: auto;
+  }
+}

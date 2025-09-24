@@ -1,0 +1,24 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.fixed-width-button {
+  width: 160px;
+}
+
+.app-book-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pagination .page-item.disabled .page-link {
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+.text-muted i {
+  font-size: 60px;
+  color: #6c757d;
+  margin-bottom: 20px;
+}

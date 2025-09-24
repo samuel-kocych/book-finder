@@ -1,0 +1,19 @@
+.navbar {
+  background: linear-gradient(to right, #2c3e50, #34495e);
+  color: #fff;
+}
+
+.navbar .nav-link,
+#heading {
+  cursor: pointer;
+}
+
+#offcanvasNavbar {
+  width: 300px;
+}
+
+@media (max-width: 768px) {
+  .navbar .nav-link {
+    color: black;
+  }
+}

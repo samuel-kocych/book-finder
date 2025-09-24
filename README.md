@@ -62,5 +62,5 @@ npm run dev
 
 
 ## Notes
-- **Project was also hosted on AWS S3 and EC2 for demo purposes.
-- **User favourite books are stored in MongoDB via the Express server.
+- Project was also hosted on AWS S3 and EC2 for demo purposes.
+- User favourite books are stored in MongoDB via the Express server.
